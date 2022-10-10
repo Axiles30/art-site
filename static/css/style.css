@@ -1,11 +1,25 @@
 body{
-    background-image: url(static/img/1.jpg);
-    background-color: #e0f1ff ;
+    background-image: url(static/img/background.jpg);
+
+    background-repeat: no-repeat;
+    /*background-color: #e0f1ff ;*/
     font-family: "Times New Roman", Times, serif;
     color: #70b5ff;
 }
 
+/*html {*/
+/*  background-image: url(static/img/background.jpg);*/
+/*  background-repeat: no-repeat;*/
+
+/*  background-attachment: fixed;*/
+/*  -webkit-background-size: 200px;*/
+/*  -moz-background-size: 200px;*/
+/*  -o-background-size: 200px;*/
+/*  background-size: 500px;*/
+/*}*/
+
 .button {
+
   /* Сбрасываем дефолтные стили */
   border: none;
   outline: none;
@@ -19,7 +33,7 @@ body{
   /* Тут можно поэкспериментировать */
   padding: 12px 16px;
   border-radius: 10px;
-  color: #fff;
+  color: #ffffff;
 }
 .button i {
   margin-right: 4px;
@@ -28,12 +42,6 @@ body{
 .button + .button {
   margin-left: 50px;
 }
-/*.button.blue {*/
-/*  background: #2196F3;*/
-/*}*/
-/*.button.purple {*/
-/*  background: #9b59b6;*/
-/*}*/
 
 .button.WORK {
   background: #526c8a;
