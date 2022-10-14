@@ -10,29 +10,45 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-        <br>
-   <a>
-        <button onclick="window.location.href = 'http://127.0.0.1:8000/work/'"
-                id="WORK" class=" button WORK ">
-            <i class="fa fa-unlock"></i>
-            <span>WORK</span>
-        </button>
-       <button onclick="window.location.href = 'http://127.0.0.1:8000/shop/'"
-               id="SHOP" class=" button SHOP ">
-            <i class="fa fa-unlock"></i>
-            <span>SHOP</span>
-        </button>
-       <button onclick="window.location.href = 'https://www.instagram.com/mariakov.aqua/'"
-               id="INSTA" class=" button INSTA ">
-            <i class="fa fa-unlock"></i>
-            <span>INSTA</span>
-        </button>
-       <button onclick="window.location.href = 'http://127.0.0.1:8000/about/'"
-               id="ABOUT" class=" button ABOUT ">
-            <i class="fa fa-unlock"></i>
-            <span>ABOUT</span>
-        </button>
-</a>
+
+<div class="header">
+        <div class="container">
+            <div class="header-line">
+                <div class="nav">
+                    <a href="{% url 'login' %}">Войти</a>
+                    <a href="{% url 'register' %}">Регистрация</a>
+                    <a class="nav-item" href="http://127.0.0.1:8000/work/" target="_blank">WORK</a>
+                    <a class="nav-item" href="http://127.0.0.1:8000/shop/" target="_blank">SHOP</a>
+                    <a class="nav-item" href="https://www.instagram.com/mariakov.aqua/" target="_blank">INSTA</a>
+                    <a class="nav-item" href="http://127.0.0.1:8000/about/" target="_blank">ABOUT</a>
+                </div>
+            </div>
+
+        </div>
+</div>
+<!--        <br>-->
+<!--   <a>-->
+<!--        <button onclick="window.location.href = 'http://127.0.0.1:8000/work/'"-->
+<!--                id="WORK" class=" button WORK ">-->
+<!--            <i class="fa fa-unlock"></i>-->
+<!--            <span>WORK</span>-->
+<!--        </button>-->
+<!--       <button onclick="window.location.href = 'http://127.0.0.1:8000/shop/'"-->
+<!--               id="SHOP" class=" button SHOP ">-->
+<!--            <i class="fa fa-unlock"></i>-->
+<!--            <span>SHOP</span>-->
+<!--        </button>-->
+<!--       <button onclick="window.location.href = 'https://www.instagram.com/mariakov.aqua/'"-->
+<!--               id="INSTA" class=" button INSTA ">-->
+<!--            <i class="fa fa-unlock"></i>-->
+<!--            <span>INSTA</span>-->
+<!--        </button>-->
+<!--       <button onclick="window.location.href = 'http://127.0.0.1:8000/about/'"-->
+<!--               id="ABOUT" class=" button ABOUT ">-->
+<!--            <i class="fa fa-unlock"></i>-->
+<!--            <span>ABOUT</span>-->
+<!--        </button>-->
+<!--</a>-->
 
 </body>
 </html>
