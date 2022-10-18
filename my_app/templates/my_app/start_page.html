@@ -15,17 +15,23 @@
         <div class="container">
             <div class="header-line">
                 <div class="nav">
-                    <a href="{% url 'login' %}">Войти</a>
-                    <a href="{% url 'register' %}">Регистрация</a>
                     <a class="nav-item" href="http://127.0.0.1:8000/work/" target="_blank">WORK</a>
                     <a class="nav-item" href="http://127.0.0.1:8000/shop/" target="_blank">SHOP</a>
                     <a class="nav-item" href="https://www.instagram.com/mariakov.aqua/" target="_blank">INSTA</a>
                     <a class="nav-item" href="http://127.0.0.1:8000/about/" target="_blank">ABOUT</a>
                 </div>
+                <div class="reg">
+                    <a class="log-reg" href="{% url 'login' %}">Войти</a>
+                    <a class="log-reg" href="{% url 'register' %}">Регистрация</a>
+                </div>
             </div>
-
         </div>
 </div>
+
+
+<!--<div class="header-logo">-->
+<!--                        <images src="{% static 'logo/logo1.png' %} " height="100px" alt="">-->
+<!--                    </div>-->
 <!--        <br>-->
 <!--   <a>-->
 <!--        <button onclick="window.location.href = 'http://127.0.0.1:8000/work/'"-->

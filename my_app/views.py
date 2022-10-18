@@ -5,6 +5,8 @@ from django.http import HttpResponse
 from django.urls import reverse
 from django.views.generic import TemplateView
 
+from my_app.forms import ImageForm
+
 
 def start_page(request, *args, **kwargs):
     return render(request, 'my_app/start_page.html', {})
@@ -54,9 +56,21 @@ class RegisterView(TemplateView):
             email = request.POST.get('email')
             password = request.POST.get('password')
             password2 = request.POST.get('password2')
-
             if password == password2:
                 User.objects.create_user(username, email, password)
                 return redirect(reverse("login"))
-
         return render(request, self.template_name)
+
+
+def image_upload_view(request):
+    """Process images uploaded by users"""
+    if request.method == 'POST':
+        form = ImageForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            # Get the current instance object to display in the template
+            img_obj = form.instance
+            return render(request, 'profile.html', {'form': form, 'img_obj': img_obj})
+    else:
+        form = ImageForm()
+    return render(request, 'profile.html', {'form': form})
