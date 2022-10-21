@@ -4,7 +4,7 @@ from .import views
 from .views import ProfilePage, RegisterView
 
 urlpatterns = [
-    path('accounts/profile/upload/', views.image_upload_view),
+    path('upload/', views.image_upload_view),
     path('accounts/login/', LoginView.as_view(), name="login"),
     path('accounts/profile/', ProfilePage.as_view(), name="profile"),
     path('^accounts/register/$', RegisterView.as_view(), name="register"),

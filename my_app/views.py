@@ -42,7 +42,6 @@ class LoginView(TemplateView):
 
 
 
-
 class ProfilePage(TemplateView) :
     template_name = "registration/profile.html"
 
@@ -62,6 +61,10 @@ class RegisterView(TemplateView):
         return render(request, self.template_name)
 
 
+
+def upload(request, *args, **kwargs):
+    return render(request, 'upload/index.html', {})
+
 def image_upload_view(request):
     """Process images uploaded by users"""
     if request.method == 'POST':
@@ -70,7 +73,7 @@ def image_upload_view(request):
             form.save()
             # Get the current instance object to display in the template
             img_obj = form.instance
-            return render(request, 'profile.html', {'form': form, 'img_obj': img_obj})
+            return render(request, 'index.html', {'form': form, 'img_obj': img_obj})
     else:
         form = ImageForm()
-    return render(request, 'profile.html', {'form': form})
+    return render(request, 'index.html', {'form': form})
