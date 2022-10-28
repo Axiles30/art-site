@@ -1,0 +1,31 @@
+@import url("https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
+
+body {
+    background: #dddddd;
+}
+
+aside {
+    float: left;
+    background: #c0d3fd;
+    width: 20%;
+    padding: 2.5%;
+    height: 100vh;
+    color: #fff;
+    border-right: 5px solid #264b5d;
+}
+
+aside img {
+    width: 25px;
+    float: left;
+    position: relative;
+}
+
+aside h3 {
+    margin-top: 50px;
+    font-size: 28px;
+
+}
+
+i {
+    font-family: fontawesome !important;
+}
