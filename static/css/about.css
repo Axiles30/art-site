@@ -1,68 +1,8 @@
-body {
-    font-family: Tahoma, serif;
-    background: #dee6ff;
-    margin: 0;
-    font-size: 30px;
-}
-
-h1 {
-    cursor: help;
-    margin: 0;
-    text-transform: uppercase;
-    padding-bottom: 5px;
-    border-bottom: 3px solid #264b5d;
-}
-
-form {
-    margin: 0 auto;
-    background: #fdc0c0;
-    width: 450px;
-    height: 500px;
-    padding: 20px;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.82);
-}
-
-.group {
-    margin: 10px;
-    padding: 5px;
-}
-
-label {
-    padding-left: 10px;
-    text-transform: uppercase;
-}
-
-input {
-    margin-top: 10px;
-    height: 40px;
-    width: 400px;
-    border-radius: 20px/20px;
-    border: none;
-    padding-left: 15px;
-    font-size: 18px;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.82);
-}
-
-input:focus {
-    border: 2px solid #6c00ff;
-    transform: translateX(15px);
-    width: 385px;
-}
-
-button {
-    cursor: pointer;
-    padding: 10px 30px;
-    height: 50px;
-    color: #79aec8;
-    background: #79aec8;
-    border: none;
-    text-transform: uppercase;
-    font-size: 15px;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.82);
-}
-
-button:hover {
-    opacity: .80;
-    font-weight: bold;
-    transform: scale(1.1);
-}
+ body a{
+     font-family: 'Playfair Display', serif;
+     float: left;
+     color: white;
+     margin-top: 100px;
+     text-align: center;
+     width: 75px;
+ }

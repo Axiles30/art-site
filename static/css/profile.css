@@ -2,30 +2,49 @@
 
 body {
     background: #dddddd;
+    font: PlayfairDisplay ;
 }
 
 aside {
     float: left;
-    background: #c0d3fd;
+    background: #bb5d5d;
     width: 20%;
     padding: 2.5%;
     height: 100vh;
     color: #fff;
-    border-right: 5px solid #264b5d;
+    border-right: 5px solid #465a6c;
+    border-bottom: 5px solid  #465a6c;
 }
 
 aside img {
     width: 25px;
     float: left;
     position: relative;
+    margin-right: 7px;
+
 }
 
+aside span {
+    font-size: 50px;
+}
 aside h3 {
     margin-top: 50px;
-    font-size: 28px;
-
+    font-size: 30px;
 }
 
-i {
-    font-family: fontawesome !important;
+aside ul {
+    list-style: none
+}
+aside ul li {
+    color: #ffffff;
+    display: block;
+    margin-top: 25px;
+    transition: transform .6s ease;
+}
+
+aside ul li:hover, aside ul a:hover {
+    color: #6d89b1;
+    text-decoration: none;
+    transform: scale(1.05);
+
 }

@@ -1,110 +1,134 @@
-body {
-  margin: 0;
+* {
+  box-sizing: border-box;
 }
-
+body {
+  font-size: 14px;
+  background-color: #E5E5E5;
+}
 .container {
-  margin: 0 166px;
+  margin: 0 1px;
+
 }
 
 .header {
-  background-image: url("static/img/background.jpg");
-  height: 100vh;
+  background-color: white;
+  height: 20vh;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .header-line {
-
-  padding-top: 100px;
   display: flex;
-  align-items: center;
-  justify-content: space-around;
+  padding: 50px;
+  gap: 280px;
+  text-align: center
+}
+
+.inst-item {
+
+  width: 100px;
+  height: 24px;
+  color: #1b1b1b;
+  text-decoration: none;
+  font-family: 'Open Sans', serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  margin-right: 5px;
+  margin-left: 5px;
+  letter-spacing: 0.01em;
+  flex: none;
+  order: 2;
+  flex-grow: 0;
+  text-align: left;
 }
 
 .nav-item {
-  color: #000000;
+  width: 40px;
+  height: 24px;
+  color: #383838;
   text-decoration: none;
-  font-family: sans-serif;
+  font-family: 'Open Sans', serif;
+  font-style: normal;
   font-weight: 400;
-  font-size: 30px;
-  margin-right: 25px;
-  margin-left: 100px;
+  font-size: 15px;
+  margin-right: 24px;
+  margin-left: 24px;
+  letter-spacing: 0.01em;
+
 }
 
+
+/*.reg {*/
+/*  flex-direction: row;*/
+/*  align-items: flex-start;*/
+/*  gap: 200px;*/
+/*  text-align: right;*/
+/*}*/
+
 .log-reg {
-  color: #000000;
+  width: 40px;
+  height: 24px;
+  color: #383838;
   text-decoration: none;
-  font-family: sans-serif;
-  font-weight: 600;
+  font-family: 'Open Sans', serif;
+  font-style: normal;
+  font-weight: 400;
   font-size: 15px;
   margin-right: 5px;
   margin-left: 5px;
+  letter-spacing: 0.01em;
+  flex: none;
+  order: 2;
+  flex-grow: 0;
+  text-align: right;
+
 }
 
+.art-position {
+  text-align: center;
 
 
+}
+.art {
+  margin-right: 60px;
+  margin-left: 60px;
+  text-align: center;
+  display: inline-block;
+  /*position: absolute;*/
+  width: 190px;
+  height: 287px;
+  left: 444px;
+  top: 216px;
+  opacity: 0.98;
+  border-radius: 30px;
 
+}
+.catalog{
+  -webkit-tap-highlight-color:  transparent;
+  width: 40px;
+  height: 24px;
+  color: #383838;
+  text-decoration: none;
+  font-family: 'Open Sans', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  /*margin-right: 10px;*/
+  /*margin-left: 10px;*/
+  letter-spacing: 0.01em;
+}
+.art2 {
+  margin-right: 90px;
+  margin-left: 90px;
+  text-align: center;
+  display: inline-block;
+  /*position: absolute;*/
+  width: 190px;
+  height: 287px;
+  left: 444px;
+  top: 216px;
+  opacity: 0.98;
+  border-radius: 30px;
 
-
-/*body{*/
-/*    background-image: url(static/images/background.jpg);*/
-
-/*    background-repeat: no-repeat;*/
-/*    !*background-color: #e0f1ff ;*!*/
-/*    font-family: "Times New Roman", Times, serif;*/
-/*    color: #70b5ff;*/
-/*}*/
-
-/*html {*/
-/*  background-image: url(static/images/background.jpg);*/
-/*  background-repeat: no-repeat;*/
-
-/*  background-attachment: fixed;*/
-/*  -webkit-background-size: 200px;*/
-/*  -moz-background-size: 200px;*/
-/*  -o-background-size: 200px;*/
-/*  background-size: 500px;*/
-/*}*/
-
-/*.button {*/
-
-/*  !* Сбрасываем дефолтные стили *!*/
-/*  border: none;*/
-/*  outline: none;*/
-/*  display: inline-block;*/
-/*  text-align: center;*/
-/*  text-decoration: none;*/
-/*  cursor: pointer;*/
-/*  font-size: 16px;*/
-/*  !* Можно также использовать любые встроенные и кастомные шрифты, например, отсюда  *!*/
-/*  font-family: Roboto, Verdana, Tahoma, sans;*/
-/*  !* Тут можно поэкспериментировать *!*/
-/*  padding: 12px 16px;*/
-/*  border-radius: 10px;*/
-/*  color: #ffffff;*/
-/*}*/
-/*.button i {*/
-/*  margin-right: 4px;*/
-
-/*}*/
-/*.button + .button {*/
-/*  margin-left: 50px;*/
-/*}*/
-
-/*.button.WORK {*/
-/*  background: #526c8a;*/
-/*  margin-left: 500px;*/
-
-/*}*/
-/*.button.SHOP {*/
-/*  background: #526c8a;*/
-
-/*}*/
-/*.button.INSTA {*/
-/*  background: #526c8a;*/
-
-/*}*/
-/*.button.ABOUT {*/
-/*  background: #526c8a;*/
-
-/*}*/
+}
