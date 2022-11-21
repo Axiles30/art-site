@@ -2,6 +2,16 @@
 <!doctype html>
 <html lang="ru">
 <head>
+    <script>
+        function iClosed() {
+        document.getElementById("form_reg").style.display = "none";
+        }
+        function iOpen() {
+        document.getElementById("form_reg").style.display = "block";
+        // alert('message hello');
+    }
+    </script>
+<!--    <script src="{% static 'static/js/index.js' %}"></script>-->
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -10,9 +20,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
+
 <body>
 <div class="header">
         <div class="container">
@@ -26,8 +36,48 @@
                     <a class="nav-item" href="https://www.instagram.com/mariakov.aqua/" style="color:#383838;" target="_blank">Insta</a>
                     <a class="nav-item" href="http://127.0.0.1:8000/about/" style="color:#383838;" target="_blank">About</a>
                 </div>
-                <div class="reg">
-                    <a class="log-reg" href="{% url 'login' %}" style="color:#383838;">Login</a>
+            <div class="reg">
+                    <div class="button">
+                        <span type="button" onclick="iOpen()"> Login </span>
+                    </div>
+                    <div class="forma_reg" style="display: none;"  id = 'form_reg'>
+                            {% if error %}
+                            <div style="color:red;">{{ error }}</div>
+                            {% endif %}
+                            <form class="log_form" method="post">
+                                <div class="form-header">
+<!--                                    <span class="close-btn" onclick="myFunction()">X</span>-->
+                                    <button type="button" onclick="iClosed()" class="btn-close" aria-label="Close"></button>
+                                </div>
+                                <h1>Sign in</h1>
+                                {% csrf_token %}
+                                <div class="input1">
+                                    <div>
+                                        <a class="letter1">Email:</a>
+                                    </div>
+                                    <input type="text" name="email" placeholder="Email">
+                                </div>
+                                <div class="input2">
+                                    <div>
+                                        <a class="letter2">Password:</a>
+                                    </div>
+                                    <input type="password" name="password" placeholder="Password">
+                                </div>
+                                <div class="button">
+                                    <div class="container">
+                                        <div class="remember">
+                                            <a class="nav-item" href="" style="color:#383838;" target="_blank">Remember me</a>
+                                        </div>
+                                        <div>
+                                            <a>
+                                                Forgot password?
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <input type="submit" value="Sign in">
+                                </div>
+                            </form>
+                    </div>
                     <a>|</a>
                     <a class="log-reg" href="{% url 'register' %}" style="color:#383838;">Registration</a>
                 </div>
@@ -36,13 +86,13 @@
 </div>
 <main>
     <p class="art-position">
-        <img class="art" src="{% static 'images/photo_2022-11-01_16-31-46.jpg' %}" alt="" >
-        <img class="art" src="{% static 'images/photo_2022-11-01_16-18-49.jpg' %}" alt="" >
-        <img class="art" src="{% static 'images/photo_2022-11-01_16-18-52.jpg' %}" alt="" >
+        <img class="art" src="{% static 'images/photo_2022-11-01_16-31-46.jpg' %}" alt="">
+        <img class="art" src="{% static 'images/photo_2022-11-01_16-18-49.jpg' %}" alt="">
+        <img class="art" src="{% static 'images/photo_2022-11-01_16-18-52.jpg' %}" alt="">
     </p>
     <p class="art-position">
         <img class="art2" src="{% static 'images/photo_2022-11-01_16-18-53.jpg' %}" alt="" >
-        <a class="catalog" href="http://127.0.0.1:8000/work/" style="color:#383838;">Перейти в каталог<img src="{% static 'logo/Frame 1.png' %}" alt=""></a>
+        <a class="catalog" href="http://127.0.0.1:8000/work/" style="color:#383838;">Catalog<img src="{% static 'logo/Frame 1.png' %}" alt=""></a>
         <img class="art2" src="{% static 'images/photo_2022-11-01_16-18-52 (2).jpg' %}" alt="" >
     </p>
 </main>

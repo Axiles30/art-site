@@ -6,17 +6,83 @@
     <title>Login</title>
     <link rel="stylesheet" href="{% static 'css/reg.css' %}">
 </head>
+
 <body>
     {% if error %}
         <div style="color:red;">{{ error }}</div>
     {% endif %}
     <form method="post">
-        <center><h1>Вход на сайт</h1>
+        <h1>Sign in</h1>
         {% csrf_token %}
-        <input type="text" name="username" placeholder="Логин">
-        <input type="password" name="password" placeholder="Пароль">
-        <input type="submit" value="Войти">
-        </center>
+        <div class="input1">
+            <div>
+                <a class="letter1">Email:</a>
+            </div>
+            <input type="text" name="email" placeholder="Email">
+        </div>
+        <div class="input2">
+            <div>
+                <a class="letter2">Password:</a>
+            </div>
+            <input type="password" name="password" placeholder="Password">
+        </div>
+        <div class="button">
+            <div class="container">
+                <div class="remember">
+                    <a class="nav-item" href="" style="color:#383838;" target="_blank">Remember me</a>
+                </div>
+                <div>
+                    <a>
+                        Forgot password?
+                    </a>
+                </div>
+            </div>
+            <input type="submit" value="Sign in">
+        </div>
     </form>
 </body>
 </html>
+
+
+<div class="reg">
+                    <div class="button">
+                        <span type="button" onclick="iOpen()"> Login </span>
+                    </div>
+                    <div class="forma_reg" style="display: none;"  id = 'form_reg'>
+                            {% if error %}
+                            <div style="color:red;">{{ error }}</div>
+                            {% endif %}
+                            <form class="log_form" method="post">
+                                <div class="form-header">
+<!--                                    <span class="close-btn" onclick="myFunction()">X</span>-->
+                                    <button type="button" onclick="iClosed()" class="btn-close" aria-label="Close"></button>
+                                </div>
+                                <h1>Sign in</h1>
+                                {% csrf_token %}
+                                <div class="input1">
+                                    <div>
+                                        <a class="letter1">Email:</a>
+                                    </div>
+                                    <input type="text" name="email" placeholder="Email">
+                                </div>
+                                <div class="input2">
+                                    <div>
+                                        <a class="letter2">Password:</a>
+                                    </div>
+                                    <input type="password" name="password" placeholder="Password">
+                                </div>
+                                <div class="button">
+                                    <div class="container">
+                                        <div class="remember">
+                                            <a class="nav-item" href="" style="color:#383838;" target="_blank">Remember me</a>
+                                        </div>
+                                        <div>
+                                            <a>
+                                                Forgot password?
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <input type="submit" value="Sign in">
+                                </div>
+                            </form>
+                    </div>

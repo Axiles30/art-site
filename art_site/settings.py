@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'my_app',
+    'rest_framework',
 
 ]
 
@@ -139,3 +140,7 @@ BOOTSTRAP5 = {
     "css_url": {}, # I could add a custom URL here
     "theme_url": "..." # Or I could override the theme here
 }
+
+
+REDIS_HOST = 'localhost'
+REDIS_PORT = 6379
